@@ -2,7 +2,7 @@ import UIKit
 import DATASource
 import CoreData
 
-class RootController: BaseTableViewController {
+class VenuesController: BaseTableViewController {
     lazy var dataSource: DATASource = {
         let request = NSFetchRequest(entityName: "Item")
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
@@ -23,6 +23,6 @@ class RootController: BaseTableViewController {
 
         self.fetcher.posts { error in
 
-        }
+        } 
     }
 }

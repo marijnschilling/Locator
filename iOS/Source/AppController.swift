@@ -17,8 +17,18 @@ extension AppController: UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         guard let window = self.window else { fatalError("Window not found") }
 
-        let navigationController = UINavigationController(rootViewController: RootController(fetcher: self.fetcher))
-        window.rootViewController = navigationController
+        let venuesNavigationController = UINavigationController(rootViewController: VenuesController(fetcher: self.fetcher))
+        let venuesTabBarItem = UITabBarItem(title: "Venues", image: nil, selectedImage: nil)
+        venuesNavigationController.tabBarItem = venuesTabBarItem
+
+        let mapNavigationController = UINavigationController(rootViewController: MapController(fetcher: self.fetcher))
+        let mapTabBarItem = UITabBarItem(title: "Map", image: nil, selectedImage: nil)
+        mapNavigationController.tabBarItem = mapTabBarItem
+
+        let tabController = UITabBarController()
+        tabController.viewControllers = [venuesNavigationController, mapNavigationController]
+
+        window.rootViewController = tabController
         window.makeKeyAndVisible()
 
         return true
