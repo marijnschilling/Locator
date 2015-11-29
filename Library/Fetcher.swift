@@ -21,10 +21,14 @@ public class Fetcher {
         data.persistWithCompletion(completion)
     }
 
+    public func stubPosts() {
+        self.networking.stubGET("/items", fileName: "items.json")
+    }
+
     public func posts(completion: (error: NSError?) -> ()) {
-        self.networking.GET("/en/news/category/app/?json=1") { JSON, error in
-            if let JSON = JSON as? [String : AnyObject], posts = JSON["posts"] as? [[String : AnyObject]] {
-                Sync.changes(posts, inEntityNamed: "Item", dataStack: self.data, completion: { error in
+        self.networking.GET("/items") { JSON, error in
+            if let items = JSON as? [[String : AnyObject]] {
+                Sync.changes(items, inEntityNamed: "Item", dataStack: self.data, completion: { error in
                     completion(error: error)
                 })
             } else {

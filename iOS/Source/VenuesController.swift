@@ -20,6 +20,8 @@ class VenuesController: BaseTableViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.dataSource = self.dataSource
 
+        self.fetcher.stubPosts()
+
         self.fetcher.posts { error in
 
         } 
