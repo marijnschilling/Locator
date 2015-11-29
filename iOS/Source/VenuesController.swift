@@ -17,7 +17,6 @@ class VenuesController: BaseTableViewController {
         super.viewDidLoad()
 
         self.title = "Venues"
-
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.dataSource = self.dataSource
 
