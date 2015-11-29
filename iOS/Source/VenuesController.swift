@@ -9,8 +9,10 @@ class VenuesController: BaseTableViewController {
             NSSortDescriptor(key: "title", ascending: true),
             NSSortDescriptor(key: "city", ascending: true)
         ]
-        let dataSource = DATASource(tableView: self.tableView!, cellIdentifier: "Cell", fetchRequest: request, mainContext: self.fetcher.context, sectionName: "city", configuration: { cell, item, indexPath in
-            cell.textLabel?.text = item.valueForKey("title") as? String
+        let dataSource = DATASource(tableView: self.tableView!, cellIdentifier: VenueCell.Identifier, fetchRequest: request, mainContext: self.fetcher.context, sectionName: "city", configuration: { cell, item, indexPath in
+            if let cell = cell as? VenueCell, item = item as? Venue {
+                cell.textLabel?.text = item.title
+            }
         })
 
         dataSource.delegate = self
@@ -22,7 +24,7 @@ class VenuesController: BaseTableViewController {
         super.viewDidLoad()
 
         self.title = "Venues"
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.registerClass(VenueCell.self, forCellReuseIdentifier: VenueCell.Identifier)
         self.tableView.dataSource = self.dataSource
 
         self.fetcher.stubPosts()

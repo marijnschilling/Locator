@@ -6,7 +6,7 @@ class AppController: UIResponder {
     var window: UIWindow?
 
     private lazy var fetcher: Fetcher = {
-        let fetcher = Fetcher(baseURL: "https://sample.com", modelName: "iOS")
+        let fetcher = Fetcher(baseURL: "https://sample.com", modelName: "Project")
 
         return fetcher
     }()
