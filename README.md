@@ -1,6 +1,6 @@
-# PROJECT_NAME
+# Locator
 
-PROJECT_DESCRIPTION
+Display locations on a list or a map
 
 ## Running the project
 
@@ -16,7 +16,7 @@ sudo gem install cocoapods
 pod install
 ```
 
-- Open `Project.xcworkspace` or `Project.xcodeproj`
+- Open `Project.xcworkspace`
 
 ## Updating generated models
 
