@@ -28,7 +28,7 @@ public class Fetcher {
     public func posts(completion: (error: NSError?) -> ()) {
         self.networking.GET("/items") { JSON, error in
             if let items = JSON as? [[String : AnyObject]] {
-                Sync.changes(items, inEntityNamed: "Item", dataStack: self.data, completion: { error in
+                Sync.changes(items, inEntityNamed: "Venue", dataStack: self.data, completion: { error in
                     completion(error: error)
                 })
             } else {

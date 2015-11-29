@@ -4,7 +4,7 @@ import CoreData
 
 class VenuesController: BaseTableViewController {
     lazy var dataSource: DATASource = {
-        let request = NSFetchRequest(entityName: "Item")
+        let request = NSFetchRequest(entityName: "Venue")
         request.sortDescriptors = [
             NSSortDescriptor(key: "title", ascending: true),
             NSSortDescriptor(key: "city", ascending: true)
