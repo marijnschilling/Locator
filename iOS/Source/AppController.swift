@@ -17,7 +17,8 @@ extension AppController: UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         guard let window = self.window else { fatalError("Window not found") }
 
-        window.rootViewController = RootController(fetcher: self.fetcher)
+        let navigationController = UINavigationController(rootViewController: RootController(fetcher: self.fetcher))
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
         return true
