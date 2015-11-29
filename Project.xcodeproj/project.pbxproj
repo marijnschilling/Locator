@@ -15,6 +15,8 @@
 		141A6FDC1BDE2DAB00CB6E82 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */; };
 		141A6FDD1BDE2DAB00CB6E82 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */; };
 		142816F41C0B4B1500C3412B /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142816F31C0B4B1500C3412B /* MapController.swift */; };
+		145D14961C0BBB70003B9839 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D14951C0BBB70003B9839 /* VenueController.swift */; };
+		145D14971C0BBB70003B9839 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D14951C0BBB70003B9839 /* VenueController.swift */; };
 		145F81CD1BDE2CFD0016A9E0 /* iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 145F81CB1BDE2CFD0016A9E0 /* iOS.xcdatamodeld */; };
 		146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146E279F1BCD51F200959BBA /* LaunchScreen.xib */; };
 		146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146E27A11BCD51F200959BBA /* Images.xcassets */; };
@@ -34,6 +36,7 @@
 		141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		142816F31C0B4B1500C3412B /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		145D14951C0BBB70003B9839 /* VenueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
 		145F81CC1BDE2CFD0016A9E0 /* App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = App.xcdatamodel; sourceTree = "<group>"; };
 		146E27891BCD51C800959BBA /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146E27A01BCD51F200959BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 				146E27A41BCD51F200959BBA /* AppController.swift */,
 				146E27A51BCD51F200959BBA /* VenuesController.swift */,
 				142816F31C0B4B1500C3412B /* MapController.swift */,
+				145D14951C0BBB70003B9839 /* VenueController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -319,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145D14961C0BBB70003B9839 /* VenueController.swift in Sources */,
 				141A6FDB1BDE2DAB00CB6E82 /* Fetcher.swift in Sources */,
 				146E27AC1BCD51F200959BBA /* AppController.swift in Sources */,
 				141A6FDC1BDE2DAB00CB6E82 /* UIColor+Custom.swift in Sources */,
@@ -337,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1483128E1B92C11500266943 /* Tests.swift in Sources */,
+				145D14971C0BBB70003B9839 /* VenueController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
