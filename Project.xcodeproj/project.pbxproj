@@ -19,7 +19,6 @@
 		1445AED61C0BC0F900D746A9 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED41C0BC0F900D746A9 /* Venue.swift */; };
 		1445AED81C0BC11A00D746A9 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED71C0BC11A00D746A9 /* VenueCell.swift */; };
 		145D14961C0BBB70003B9839 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D14951C0BBB70003B9839 /* VenueController.swift */; };
-		145D14971C0BBB70003B9839 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145D14951C0BBB70003B9839 /* VenueController.swift */; };
 		146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146E279F1BCD51F200959BBA /* LaunchScreen.xib */; };
 		146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146E27A11BCD51F200959BBA /* Images.xcassets */; };
 		146E27AC1BCD51F200959BBA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E27A41BCD51F200959BBA /* AppController.swift */; };
@@ -118,8 +117,8 @@
 				146E27A41BCD51F200959BBA /* AppController.swift */,
 				146E27A51BCD51F200959BBA /* VenuesController.swift */,
 				1445AED71C0BC11A00D746A9 /* VenueCell.swift */,
-				142816F31C0B4B1500C3412B /* MapController.swift */,
 				145D14951C0BBB70003B9839 /* VenueController.swift */,
+				142816F31C0B4B1500C3412B /* MapController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -356,7 +355,6 @@
 			files = (
 				1483128E1B92C11500266943 /* Tests.swift in Sources */,
 				14D21D8E1C0BC0600046D709 /* Project.xcdatamodeld in Sources */,
-				145D14971C0BBB70003B9839 /* VenueController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

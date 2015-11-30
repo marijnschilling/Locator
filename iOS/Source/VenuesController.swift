@@ -40,3 +40,11 @@ extension VenuesController: DATASourceDelegate {
         return [String]()
     }
 }
+
+extension VenuesController {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let venue = self.dataSource.objectAtIndexPath(indexPath) as! Venue
+        let venueController = VenueController(venue: venue)
+        self.navigationController?.pushViewController(venueController, animated: true)
+    }
+}
