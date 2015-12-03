@@ -5,6 +5,7 @@ import CoreData
 class MapController: BaseViewController {
     override func loadView() {
         let view = MKMapView(frame: UIScreen.mainScreen().bounds)
+        view.delegate = self
         self.view = view
     }
 
@@ -22,5 +23,11 @@ class MapController: BaseViewController {
             annotation.coordinate = CLLocationCoordinate2D(latitude: Double(item.latitude!)!, longitude: Double(item.longitude!)!)
             mapView.addAnnotation(annotation)
         }
+    }
+}
+
+extension MapController: MKMapViewDelegate {
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+
     }
 }
