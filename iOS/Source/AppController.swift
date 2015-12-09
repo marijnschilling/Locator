@@ -25,7 +25,7 @@ extension AppController: UIApplicationDelegate {
         let mapTabBarItem = UITabBarItem(title: "Map", image: nil, selectedImage: nil)
         mapNavigationController.tabBarItem = mapTabBarItem
 
-        let tabController = UITabBarController()
+        let tabController = TabBarController()
         tabController.viewControllers = [venuesNavigationController, mapNavigationController]
 
         window.rootViewController = tabController
