@@ -15,8 +15,8 @@
 		141A6FDC1BDE2DAB00CB6E82 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */; };
 		141A6FDD1BDE2DAB00CB6E82 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */; };
 		142816F41C0B4B1500C3412B /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142816F31C0B4B1500C3412B /* MapController.swift */; };
-		142E8B851C17B330008CA262 /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B841C17B330008CA262 /* PinView.swift */; };
-		142E8B871C17B3F2008CA262 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B861C17B3F2008CA262 /* PinAnnotation.swift */; };
+		142E8B851C17B330008CA262 /* VenueAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B841C17B330008CA262 /* VenueAnnotationView.swift */; };
+		142E8B871C17B3F2008CA262 /* VenueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B861C17B3F2008CA262 /* VenueAnnotation.swift */; };
 		1445AED51C0BC0F900D746A9 /* _Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED31C0BC0F900D746A9 /* _Venue.swift */; };
 		1445AED61C0BC0F900D746A9 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED41C0BC0F900D746A9 /* Venue.swift */; };
 		1445AED81C0BC11A00D746A9 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED71C0BC11A00D746A9 /* VenueCell.swift */; };
@@ -41,8 +41,8 @@
 		141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		142816F31C0B4B1500C3412B /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
-		142E8B841C17B330008CA262 /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
-		142E8B861C17B3F2008CA262 /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		142E8B841C17B330008CA262 /* VenueAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueAnnotationView.swift; sourceTree = "<group>"; };
+		142E8B861C17B3F2008CA262 /* VenueAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueAnnotation.swift; sourceTree = "<group>"; };
 		1445AED31C0BC0F900D746A9 /* _Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Venue.swift; sourceTree = "<group>"; };
 		1445AED41C0BC0F900D746A9 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		1445AED71C0BC11A00D746A9 /* VenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 				1445AED71C0BC11A00D746A9 /* VenueCell.swift */,
 				145D14951C0BBB70003B9839 /* VenueController.swift */,
 				142816F31C0B4B1500C3412B /* MapController.swift */,
-				142E8B841C17B330008CA262 /* PinView.swift */,
-				142E8B861C17B3F2008CA262 /* PinAnnotation.swift */,
+				142E8B841C17B330008CA262 /* VenueAnnotationView.swift */,
+				142E8B861C17B3F2008CA262 /* VenueAnnotation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -338,13 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				142E8B871C17B3F2008CA262 /* PinAnnotation.swift in Sources */,
+				142E8B871C17B3F2008CA262 /* VenueAnnotation.swift in Sources */,
 				145D14961C0BBB70003B9839 /* VenueController.swift in Sources */,
 				1445AED51C0BC0F900D746A9 /* _Venue.swift in Sources */,
 				141A6FDB1BDE2DAB00CB6E82 /* Fetcher.swift in Sources */,
 				1445AED81C0BC11A00D746A9 /* VenueCell.swift in Sources */,
 				146E27AC1BCD51F200959BBA /* AppController.swift in Sources */,
-				142E8B851C17B330008CA262 /* PinView.swift in Sources */,
+				142E8B851C17B330008CA262 /* VenueAnnotationView.swift in Sources */,
 				141A6FDC1BDE2DAB00CB6E82 /* UIColor+Custom.swift in Sources */,
 				14D21D8D1C0BC0600046D709 /* Project.xcdatamodeld in Sources */,
 				141A6FDD1BDE2DAB00CB6E82 /* UIFont+Custom.swift in Sources */,

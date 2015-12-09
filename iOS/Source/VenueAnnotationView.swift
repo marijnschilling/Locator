@@ -1,11 +1,11 @@
 import MapKit
 
-class PinView: MKAnnotationView {
+class VenueAnnotationView: MKAnnotationView {
     static let Identifier = "PinView"
     weak var venue: Venue?
 
-    init(annotation: PinAnnotation?) {
-        super.init(annotation: annotation, reuseIdentifier: PinView.Identifier)
+    init(annotation: VenueAnnotation?) {
+        super.init(annotation: annotation, reuseIdentifier: VenueAnnotationView.Identifier)
 
         self.canShowCallout = true
         self.image = UIImage(named: "dot")

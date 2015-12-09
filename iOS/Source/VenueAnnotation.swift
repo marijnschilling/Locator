@@ -1,6 +1,6 @@
 import MapKit
 
-class PinAnnotation: MKPointAnnotation {
+class VenueAnnotation: MKPointAnnotation {
     unowned var venue: Venue
 
     init(venue: Venue) {

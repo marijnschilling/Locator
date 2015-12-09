@@ -18,7 +18,7 @@ class MapController: BaseViewController {
         let venues = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
         let mapView = self.view as! MKMapView
         for venue in venues {
-            let annotation = PinAnnotation(venue: venue)
+            let annotation = VenueAnnotation(venue: venue)
             mapView.addAnnotation(annotation)
         }
     }
@@ -26,21 +26,21 @@ class MapController: BaseViewController {
 
 extension MapController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation.isKindOfClass(MKPointAnnotation.self), let pinAnnotation = annotation as? PinAnnotation else { return nil }
+        guard annotation.isKindOfClass(MKPointAnnotation.self), let venueAnnotation = annotation as? VenueAnnotation else { return nil }
 
-        if let pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(PinView.Identifier) as? PinView {
-            pinView.annotation = pinAnnotation
-            return pinView
+        if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(VenueAnnotationView.Identifier) as? VenueAnnotationView {
+            annotationView.annotation = venueAnnotation
+            return annotationView
         } else {
-            let pinView = PinView(annotation: pinAnnotation)
-            return pinView
+            let annotationView = VenueAnnotationView(annotation: venueAnnotation)
+            return annotationView
         }
     }
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let pinView = view as? PinView, pinAnnotation = pinView.annotation as? PinAnnotation else { return }
+        guard let pinView = view as? VenueAnnotationView, venueAnnotation = pinView.annotation as? VenueAnnotation else { return }
 
-        let controller = VenueController(venue: pinAnnotation.venue)
+        let controller = VenueController(venue: venueAnnotation.venue)
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
