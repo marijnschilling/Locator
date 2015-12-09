@@ -3,6 +3,15 @@ import MapKit
 import CoreData
 
 class MapController: BaseViewController {
+    var locatedUser = false
+
+    lazy var locationManager: CLLocationManager = {
+        let object = CLLocationManager()
+        object.delegate = self
+        object.requestWhenInUseAuthorization()
+        return object
+    }()
+
     override func loadView() {
         let view = MKMapView(frame: UIScreen.mainScreen().bounds)
         view.delegate = self
@@ -21,11 +30,27 @@ class MapController: BaseViewController {
             let annotation = VenueAnnotation(venue: venue)
             mapView.addAnnotation(annotation)
         }
+
+        let locationButton = UIBarButtonItem(image: UIImage(named: "location-normal")!, style: .Done, target: self, action: "locationButtonAction")
+        self.navigationItem.rightBarButtonItem = locationButton
     }
 
     func showVenueFromAnnotation(annotation: VenueAnnotation) {
         let controller = VenueController(venue: annotation.venue)
         self.navigationController?.pushViewController(controller, animated: true)
+    }
+
+    func locationButtonAction() {
+        let mapView = self.view as! MKMapView
+
+        if self.locatedUser {
+            mapView.setCenterCoordinate(mapView.userLocation.coordinate, animated: true)
+        }
+
+        locationManager.startUpdatingLocation()
+
+        let locationButton = UIBarButtonItem(image: UIImage(named: "location-selected")!, style: .Done, target: self, action: "locationButtonAction")
+        self.navigationItem.rightBarButtonItem = locationButton
     }
 }
 
@@ -42,12 +67,24 @@ extension MapController: MKMapViewDelegate {
         }
     }
 
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        print("didSelectAnnotationView")
-    }
-
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let annotationView = view as? VenueAnnotationView, venueAnnotation = annotationView.annotation as? VenueAnnotation else { return }
         showVenueFromAnnotation(venueAnnotation)
+    }
+}
+
+extension MapController: CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let mapView = self.view as! MKMapView
+        for location in locations {
+            self.locatedUser = true
+            mapView.setCenterCoordinate(location.coordinate, animated: true)
+        }
+        manager.stopUpdatingLocation()
+    }
+
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        let mapView = self.view as! MKMapView
+        mapView.showsUserLocation = true
     }
 }
