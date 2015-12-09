@@ -22,6 +22,11 @@ class MapController: BaseViewController {
             mapView.addAnnotation(annotation)
         }
     }
+
+    func showVenueFromAnnotation(annotation: VenueAnnotation) {
+        let controller = VenueController(venue: annotation.venue)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension MapController: MKMapViewDelegate {
@@ -29,18 +34,29 @@ extension MapController: MKMapViewDelegate {
         guard annotation.isKindOfClass(MKPointAnnotation.self), let venueAnnotation = annotation as? VenueAnnotation else { return nil }
 
         if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(VenueAnnotationView.Identifier) as? VenueAnnotationView {
+            annotationView.viewDelegate = self
             annotationView.annotation = venueAnnotation
             return annotationView
         } else {
             let annotationView = VenueAnnotationView(annotation: venueAnnotation)
+            annotationView.viewDelegate = self
             return annotationView
         }
     }
 
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let pinView = view as? VenueAnnotationView, venueAnnotation = pinView.annotation as? VenueAnnotation else { return }
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        print("didSelectAnnotationView")
+    }
 
-        let controller = VenueController(venue: venueAnnotation.venue)
-        self.navigationController?.pushViewController(controller, animated: true)
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let annotationView = view as? VenueAnnotationView, venueAnnotation = annotationView.annotation as? VenueAnnotation else { return }
+        showVenueFromAnnotation(venueAnnotation)
+    }
+}
+
+extension MapController: VenueAnnotationViewDelegate {
+    func annotationViewDidSelect(annotationView: VenueAnnotationView) {
+        guard let venueAnnotation = annotationView.annotation as? VenueAnnotation else { return }
+        showVenueFromAnnotation(venueAnnotation)
     }
 }
