@@ -26,7 +26,7 @@ extension AppController: UIApplicationDelegate {
         mapNavigationController.tabBarItem = mapTabBarItem
 
         let tabController = TabBarController()
-        tabController.viewControllers = [venuesNavigationController, mapNavigationController]
+        tabController.viewControllers = [mapNavigationController, venuesNavigationController]
 
         window.rootViewController = tabController
         window.makeKeyAndVisible()
