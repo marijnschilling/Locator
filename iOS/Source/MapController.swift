@@ -27,7 +27,22 @@ class MapController: BaseViewController {
 }
 
 extension MapController: MKMapViewDelegate {
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation.isKindOfClass(MKPointAnnotation.self) else { return nil }
+
+        if let pointAnnotation = mapView.dequeueReusableAnnotationViewWithIdentifier("CustomPinAnnotationView") {
+            pointAnnotation.annotation = annotation
+            return pointAnnotation
+        } else {
+            let pointAnnotation = MKAnnotationView(annotation: annotation, reuseIdentifier: "CustomPinAnnotationView")
+            pointAnnotation.canShowCallout = true
+            pointAnnotation.image = UIImage(named: "dot")
+            pointAnnotation.calloutOffset = CGPoint(x: 0, y: 32)
+            return pointAnnotation
+        }
+    }
+
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 
     }
 }
