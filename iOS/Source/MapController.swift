@@ -34,12 +34,10 @@ extension MapController: MKMapViewDelegate {
         guard annotation.isKindOfClass(MKPointAnnotation.self), let venueAnnotation = annotation as? VenueAnnotation else { return nil }
 
         if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(VenueAnnotationView.Identifier) as? VenueAnnotationView {
-            annotationView.viewDelegate = self
             annotationView.annotation = venueAnnotation
             return annotationView
         } else {
             let annotationView = VenueAnnotationView(annotation: venueAnnotation)
-            annotationView.viewDelegate = self
             return annotationView
         }
     }
@@ -50,13 +48,6 @@ extension MapController: MKMapViewDelegate {
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let annotationView = view as? VenueAnnotationView, venueAnnotation = annotationView.annotation as? VenueAnnotation else { return }
-        showVenueFromAnnotation(venueAnnotation)
-    }
-}
-
-extension MapController: VenueAnnotationViewDelegate {
-    func annotationViewDidSelect(annotationView: VenueAnnotationView) {
-        guard let venueAnnotation = annotationView.annotation as? VenueAnnotation else { return }
         showVenueFromAnnotation(venueAnnotation)
     }
 }
