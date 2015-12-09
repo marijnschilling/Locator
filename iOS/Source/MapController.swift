@@ -15,12 +15,10 @@ class MapController: BaseViewController {
         self.title = "Map"
 
         let fetchRequest = NSFetchRequest(entityName: Venue.entityName())
-        let items = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
+        let venues = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
         let mapView = self.view as! MKMapView
-        for item in items {
-            let annotation = MKPointAnnotation()
-            annotation.title = item.title
-            annotation.coordinate = CLLocationCoordinate2D(latitude: Double(item.latitude!)!, longitude: Double(item.longitude!)!)
+        for venue in venues {
+            let annotation = PinAnnotation(venue: venue)
             mapView.addAnnotation(annotation)
         }
     }
@@ -28,21 +26,21 @@ class MapController: BaseViewController {
 
 extension MapController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation.isKindOfClass(MKPointAnnotation.self) else { return nil }
+        guard annotation.isKindOfClass(MKPointAnnotation.self), let pinAnnotation = annotation as? PinAnnotation else { return nil }
 
-        if let pointAnnotation = mapView.dequeueReusableAnnotationViewWithIdentifier("CustomPinAnnotationView") {
-            pointAnnotation.annotation = annotation
-            return pointAnnotation
+        if let pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(PinView.Identifier) as? PinView {
+            pinView.annotation = pinAnnotation
+            return pinView
         } else {
-            let pointAnnotation = MKAnnotationView(annotation: annotation, reuseIdentifier: "CustomPinAnnotationView")
-            pointAnnotation.canShowCallout = true
-            pointAnnotation.image = UIImage(named: "dot")
-            pointAnnotation.calloutOffset = CGPoint(x: 0, y: 32)
-            return pointAnnotation
+            let pinView = PinView(annotation: pinAnnotation)
+            return pinView
         }
     }
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let pinView = view as? PinView, pinAnnotation = pinView.annotation as? PinAnnotation else { return }
 
+        let controller = VenueController(venue: pinAnnotation.venue)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

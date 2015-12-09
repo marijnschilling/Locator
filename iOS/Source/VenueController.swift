@@ -27,7 +27,6 @@ class VenueController: UIViewController {
 
         self.title = self.venue.title
         self.view.backgroundColor = UIColor.whiteColor()
-        print(self.venue.content)
         self.webView.loadHTMLString(self.venue.content!, baseURL: nil)
     }
 }
