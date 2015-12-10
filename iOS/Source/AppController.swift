@@ -17,6 +17,9 @@ extension AppController: UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         guard let window = self.window else { fatalError("Window not found") }
 
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont.regular(15)], forState: .Normal)
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont.regular(15)]
+
         let venuesNavigationController = UINavigationController(rootViewController: VenuesController(fetcher: self.fetcher))
         let venuesTabBarItem = UITabBarItem(title: "Venues", image: nil, selectedImage: nil)
         venuesNavigationController.tabBarItem = venuesTabBarItem

@@ -10,8 +10,8 @@ class VenuesController: BaseTableViewController {
             NSSortDescriptor(key: "city", ascending: true)
         ]
         let dataSource = DATASource(tableView: self.tableView!, cellIdentifier: VenueCell.Identifier, fetchRequest: request, mainContext: self.fetcher.context, sectionName: "city", configuration: { cell, item, indexPath in
-            if let cell = cell as? VenueCell, item = item as? Venue {
-                cell.textLabel?.text = item.title
+            if let cell = cell as? VenueCell, venue = item as? Venue {
+                cell.venue = venue
             }
         })
 
