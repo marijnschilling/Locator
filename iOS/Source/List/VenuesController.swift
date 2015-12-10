@@ -25,13 +25,22 @@ class VenuesController: BaseTableViewController {
 
         self.title = "Venues"
         self.tableView.registerClass(VenueCell.self, forCellReuseIdentifier: VenueCell.Identifier)
+        self.tableView.registerClass(VenuesHeader.self, forHeaderFooterViewReuseIdentifier: VenuesHeader.Identifier)
         self.tableView.dataSource = self.dataSource
 
         self.fetcher.stubPosts()
 
         self.fetcher.posts { error in
 
-        } 
+        }
+    }
+}
+
+extension VenuesController {
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(VenuesHeader.Identifier) as! VenuesHeader
+        header.textLabel?.text = "Hello"
+        return header
     }
 }
 
