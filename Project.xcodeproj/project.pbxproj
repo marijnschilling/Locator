@@ -31,6 +31,9 @@
 		14CE3E2E1C0BB35D0095C3F3 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CE3E2B1C0BB35D0095C3F3 /* items.json */; };
 		14D21D8D1C0BC0600046D709 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */; };
 		14D21D8E1C0BC0600046D709 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */; };
+		14EE62B71C194BAB0002E197 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */; };
+		14EE62B81C194BAB0002E197 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14EE62B51C194BAB0002E197 /* Montserrat-Regular.ttf */; };
+		14EE62B91C194BAB0002E197 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 14EE62B61C194BAB0002E197 /* OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		1483128D1B92C11500266943 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		14CE3E2B1C0BB35D0095C3F3 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		14D21D8C1C0BC0600046D709 /* Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project.xcdatamodel; sourceTree = "<group>"; };
+		14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		14EE62B51C194BAB0002E197 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		14EE62B61C194BAB0002E197 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		6A34B165B3DDF602D1210F42 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7007EA8FF8BABCFC3034674 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,7 @@
 		146E279E1BCD51F200959BBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14EE62B31C194BAB0002E197 /* Fonts */,
 				14CE3E2B1C0BB35D0095C3F3 /* items.json */,
 				146E279F1BCD51F200959BBA /* LaunchScreen.xib */,
 				146E27A11BCD51F200959BBA /* Images.xcassets */,
@@ -194,6 +201,16 @@
 				14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		14EE62B31C194BAB0002E197 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */,
+				14EE62B51C194BAB0002E197 /* Montserrat-Regular.ttf */,
+				14EE62B61C194BAB0002E197 /* OFL.txt */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		65453B2E3E8B042C8B17E59D /* Frameworks */ = {
@@ -296,8 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EE62B91C194BAB0002E197 /* OFL.txt in Resources */,
+				14EE62B71C194BAB0002E197 /* Montserrat-Bold.ttf in Resources */,
 				14CE3E2D1C0BB35D0095C3F3 /* items.json in Resources */,
 				146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */,
+				14EE62B81C194BAB0002E197 /* Montserrat-Regular.ttf in Resources */,
 				146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
