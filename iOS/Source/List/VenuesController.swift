@@ -27,12 +27,6 @@ class VenuesController: BaseTableViewController {
         self.tableView.registerClass(VenueCell.self, forCellReuseIdentifier: VenueCell.Identifier)
         self.tableView.registerClass(VenuesHeader.self, forHeaderFooterViewReuseIdentifier: VenuesHeader.Identifier)
         self.tableView.dataSource = self.dataSource
-
-        self.fetcher.stubPosts()
-
-        self.fetcher.posts { error in
-
-        }
     }
 }
 

@@ -23,12 +23,16 @@ class MapController: BaseViewController {
 
         self.title = "Map"
 
-        let fetchRequest = NSFetchRequest(entityName: Venue.entityName())
-        let venues = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
-        let mapView = self.view as! MKMapView
-        for venue in venues {
-            let annotation = VenueAnnotation(venue: venue)
-            mapView.addAnnotation(annotation)
+        self.fetcher.stubPosts()
+
+        self.fetcher.posts { error in
+            let fetchRequest = NSFetchRequest(entityName: Venue.entityName())
+            let venues = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
+            let mapView = self.view as! MKMapView
+            for venue in venues {
+                let annotation = VenueAnnotation(venue: venue)
+                mapView.addAnnotation(annotation)
+            }
         }
 
         let locationButton = UIBarButtonItem(image: UIImage(named: "location-normal")!, style: .Done, target: self, action: "locationButtonAction")
