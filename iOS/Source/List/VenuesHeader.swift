@@ -3,13 +3,13 @@ import UIKit
 class VenuesHeader: UITableViewHeaderFooterView {
     static let Identifier = "VenuesHeaderIdentifier"
 
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    /*
+    UITableViewHeaderFooterView does nasty things to the provided UITextLabel, like changing the color and the font.
+    This method isn't the optimal place to put this logic, but so far it's the only one that provides the required functionality.
+    */
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
-        self.textLabel?.font = UIFont.bold(14)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.textLabel?.font = UIFont.regular(15)
     }
 }

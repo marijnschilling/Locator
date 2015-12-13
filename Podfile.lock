@@ -27,10 +27,19 @@ PODS:
   - TestCheck (0.3.0)
 
 DEPENDENCIES:
-  - DATASource
+  - DATASource (from `git@github.com:3lvis/DATASource.git`)
   - Hex
   - Networking
   - Sync
+
+EXTERNAL SOURCES:
+  DATASource:
+    :git: git@github.com:3lvis/DATASource.git
+
+CHECKOUT OPTIONS:
+  DATASource:
+    :commit: 6474970223e32e19dd4511ac5b1278b97a708486
+    :git: git@github.com:3lvis/DATASource.git
 
 SPEC CHECKSUMS:
   DATAFilter: 4a1bdc065847e19d9fa1c9dd92ed2d85847967a1

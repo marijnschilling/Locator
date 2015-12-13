@@ -38,12 +38,12 @@ class VenuesController: BaseTableViewController {
 
 extension VenuesController {
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(50)
+        return CGFloat(35)
     }
 
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(VenuesHeader.Identifier) as? VenuesHeader
-        header?.textLabel?.text = "Hello"
+        header?.textLabel?.text = self.dataSource.titleForHeaderInSection(section)
         return header
     }
 }
