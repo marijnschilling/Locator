@@ -22,12 +22,13 @@ public class Fetcher {
     }
 
     public func stubPosts() {
-        self.networking.stubGET("/items", fileName: "items.json")
+        self.networking.stubGET("/items", fileName: "original.json")
     }
 
     public func posts(completion: (error: NSError?) -> ()) {
         self.networking.GET("/items") { JSON, error in
-            if let items = JSON as? [[String : AnyObject]] {
+            if let JSON = JSON as? NSDictionary {
+                let items = JSON.normalize() as [AnyObject]
                 Sync.changes(items, inEntityNamed: "Venue", dataStack: self.data, completion: { error in
                     completion(error: error)
                 })
