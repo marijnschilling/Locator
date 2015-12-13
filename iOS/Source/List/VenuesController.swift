@@ -37,14 +37,22 @@ class VenuesController: BaseTableViewController {
 }
 
 extension VenuesController {
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(50)
+    }
+
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(VenuesHeader.Identifier) as! VenuesHeader
-        header.textLabel?.text = "Hello"
+        let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(VenuesHeader.Identifier) as? VenuesHeader
+        header?.textLabel?.text = "Hello"
         return header
     }
 }
 
 extension VenuesController: DATASourceDelegate {
+    func dataSource(dataSource: DATASource, tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return nil
+    }
+
     func sectionIndexTitlesForDataSource(dataSource: DATASource, tableView: UITableView) -> [String] {
         return [String]()
     }
