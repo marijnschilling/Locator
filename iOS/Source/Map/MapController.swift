@@ -48,7 +48,7 @@ class MapController: BaseViewController {
         let mapView = self.view as! MKMapView
 
         if self.locatedUser {
-            mapView.setCenterCoordinate(mapView.userLocation.coordinate, animated: true)
+            mapView.zoomInCoordinate(mapView.userLocation.coordinate)
         }
 
         locationManager.startUpdatingLocation()
@@ -82,7 +82,7 @@ extension MapController: CLLocationManagerDelegate {
         let mapView = self.view as! MKMapView
         for location in locations {
             self.locatedUser = true
-            mapView.setCenterCoordinate(location.coordinate, animated: true)
+            mapView.zoomInCoordinate(location.coordinate)
         }
         manager.stopUpdatingLocation()
     }
