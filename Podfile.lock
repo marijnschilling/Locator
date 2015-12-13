@@ -2,7 +2,7 @@ PODS:
   - DATAFilter (0.9.1):
     - DATAObjectIDs (~> 0.5.1)
   - DATAObjectIDs (0.5.1)
-  - DATASource (5.4.0)
+  - DATASource (5.5.0)
   - DATAStack (4.0.3):
     - TestCheck (~> 0.3.0)
   - Hex (3.0.0)
@@ -38,13 +38,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   DATASource:
-    :commit: 6474970223e32e19dd4511ac5b1278b97a708486
+    :commit: 7abd4a8facc776f07a1c48876a527aeb258d63a7
     :git: git@github.com:3lvis/DATASource.git
 
 SPEC CHECKSUMS:
   DATAFilter: 4a1bdc065847e19d9fa1c9dd92ed2d85847967a1
   DATAObjectIDs: 33db74dd1c858c2d22a45a4013c95f1082182e4e
-  DATASource: 5e70ec28d6ea58199bbc399f8e3665a688cc98fd
+  DATASource: a34d3a5f5a3360cfbb5e0daf883b25bf52f50022
   DATAStack: 8622b05a7cc1dade21e105d20fdd9f8fbe63944d
   Hex: ee430da9c4412d9196366ae5327f279021dc03eb
   JSON: d08f22c3e523be050d5d5f40bca43ec02d95b2cc
