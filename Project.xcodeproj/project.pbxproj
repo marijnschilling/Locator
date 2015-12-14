@@ -33,6 +33,7 @@
 		14B3CE861C1DE5B20032AA9A /* JSONNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */; };
 		14B3CE871C1DE5B20032AA9A /* JSONNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */; };
 		14B3CE881C1DE5C10032AA9A /* original.json in Resources */ = {isa = PBXBuildFile; fileRef = 14B3CE831C1DE57F0032AA9A /* original.json */; };
+		14CDD6CF1C1F5DA400E05AC3 /* styling.html in Resources */ = {isa = PBXBuildFile; fileRef = 14CDD6CE1C1F5DA400E05AC3 /* styling.html */; };
 		14CE3E2D1C0BB35D0095C3F3 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CE3E2B1C0BB35D0095C3F3 /* items.json */; };
 		14CE3E2E1C0BB35D0095C3F3 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CE3E2B1C0BB35D0095C3F3 /* items.json */; };
 		14D21D8D1C0BC0600046D709 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		1483128D1B92C11500266943 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		14B3CE831C1DE57F0032AA9A /* original.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = original.json; sourceTree = "<group>"; };
 		14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNormalizer.swift; sourceTree = "<group>"; };
+		14CDD6CE1C1F5DA400E05AC3 /* styling.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = styling.html; sourceTree = "<group>"; };
 		14CE3E2B1C0BB35D0095C3F3 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		14D21D8C1C0BC0600046D709 /* Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project.xcdatamodel; sourceTree = "<group>"; };
 		14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				14EE62B31C194BAB0002E197 /* Fonts */,
 				14CE3E2B1C0BB35D0095C3F3 /* items.json */,
 				14B3CE831C1DE57F0032AA9A /* original.json */,
+				14CDD6CE1C1F5DA400E05AC3 /* styling.html */,
 				146E279F1BCD51F200959BBA /* LaunchScreen.xib */,
 				146E27A11BCD51F200959BBA /* Images.xcassets */,
 				146E27A21BCD51F200959BBA /* Info.plist */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EE62B91C194BAB0002E197 /* OFL.txt in Resources */,
+				14CDD6CF1C1F5DA400E05AC3 /* styling.html in Resources */,
 				14EE62B71C194BAB0002E197 /* Montserrat-Bold.ttf in Resources */,
 				14CE3E2D1C0BB35D0095C3F3 /* items.json in Resources */,
 				14B3CE841C1DE57F0032AA9A /* original.json in Resources */,
