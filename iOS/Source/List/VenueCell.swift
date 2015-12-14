@@ -6,7 +6,7 @@ class VenueCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        self.textLabel?.font = UIFont.regular(16)
+        self.textLabel?.font = UIFont.regular(17)
     }
 
     required init?(coder aDecoder: NSCoder) {
