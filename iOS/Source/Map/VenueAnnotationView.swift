@@ -2,18 +2,22 @@ import MapKit
 
 class VenueAnnotationView: MKAnnotationView {
     static let Identifier = "PinView"
-    weak var venue: Venue?
+
+    override var annotation: MKAnnotation? {
+        didSet {
+            guard let _ = annotation as? VenueAnnotation else { return }
+            self.image = UIImage(named: "dot")
+        }
+    }
 
     init(annotation: VenueAnnotation?) {
         super.init(annotation: annotation, reuseIdentifier: VenueAnnotationView.Identifier)
-
-        self.canShowCallout = true
-        self.image = UIImage(named: "dot")
 
         let image = UIImage(named: "detail-indicator")!
         let accessoryView = UIButton(type: .DetailDisclosure)
         accessoryView.setImage(image, forState: .Normal)
         self.rightCalloutAccessoryView = accessoryView
+        self.canShowCallout = true
     }
 
     override init(frame: CGRect) {
