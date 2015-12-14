@@ -18,6 +18,12 @@ class MapController: BaseViewController {
         self.view = view
     }
 
+    lazy var venues: [Venue] = {
+        let fetchRequest = NSFetchRequest(entityName: Venue.entityName())
+        let venues = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
+        return venues
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,10 +32,8 @@ class MapController: BaseViewController {
         self.fetcher.stubPosts()
 
         self.fetcher.posts { error in
-            let fetchRequest = NSFetchRequest(entityName: Venue.entityName())
-            let venues = try! self.fetcher.context.executeFetchRequest(fetchRequest) as! [Venue]
             let mapView = self.view as! MKMapView
-            for venue in venues {
+            for venue in self.venues {
                 let annotation = VenueAnnotation(venue: venue)
                 mapView.addAnnotation(annotation)
             }
