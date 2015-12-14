@@ -6,8 +6,8 @@ class VenuesController: BaseTableViewController {
     lazy var dataSource: DATASource = {
         let request = NSFetchRequest(entityName: "Venue")
         request.sortDescriptors = [
-            NSSortDescriptor(key: "title", ascending: true),
-            NSSortDescriptor(key: "city", ascending: true)
+            NSSortDescriptor(key: "city", ascending: true),
+            NSSortDescriptor(key: "title", ascending: true)
         ]
         let dataSource = DATASource(tableView: self.tableView!, cellIdentifier: VenueCell.Identifier, fetchRequest: request, mainContext: self.fetcher.context, sectionName: "city", configuration: { cell, item, indexPath in
             if let cell = cell as? VenueCell, venue = item as? Venue {
