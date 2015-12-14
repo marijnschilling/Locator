@@ -27,6 +27,23 @@ class VenueController: UIViewController {
 
         self.title = self.venue.title
         self.view.backgroundColor = UIColor.whiteColor()
-        self.webView.loadHTMLString(self.venue.content!, baseURL: nil)
+
+        let stylingFile = NSBundle.mainBundle().pathForResource("styling", ofType: "html")!
+        let stylingString = try! NSString(contentsOfFile: stylingFile, encoding: NSUTF8StringEncoding)
+        let displayedContent = NSString(format: stylingString, self.cleanString(self.venue.content!))
+        self.webView.loadHTMLString(displayedContent as String, baseURL: nil)
+    }
+
+    func cleanString(evaluated: String) -> String {
+        let firstRegex = try! NSRegularExpression(pattern: "<p><a href=\"https://rescuejuice.com", options: [])
+        let firstResult = firstRegex.stringByReplacingMatchesInString(evaluated, options: [], range: NSMakeRange(0, evaluated.characters.count), withTemplate: "<a href=\"https://rescuejuice.com")
+
+        let secondRegex = try! NSRegularExpression(pattern: "px\" /></a></p>", options: [])
+        let secondResult = secondRegex.stringByReplacingMatchesInString(firstResult, options: [], range: NSMakeRange(0, firstResult.characters.count), withTemplate: "px\" /></a>")
+
+        let thirdRegex = try! NSRegularExpression(pattern: "width=\".*\"", options: [])
+        let thirdResult = thirdRegex.stringByReplacingMatchesInString(secondResult, options: [], range: NSMakeRange(0, secondResult.characters.count), withTemplate: "width=100%; height=auto;")
+        
+        return thirdResult
     }
 }
