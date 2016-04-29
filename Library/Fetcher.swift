@@ -1,7 +1,6 @@
 import Foundation
 import DATAStack
 import Networking
-import JSON
 import Sync
 
 public class Fetcher {
@@ -22,13 +21,13 @@ public class Fetcher {
     }
 
     public func stubPosts() {
-        self.networking.stubGET("/items", fileName: "original.json")
+        self.networking.fakeGET("/items", fileName: "original.json")
     }
 
     public func posts(completion: (error: NSError?) -> ()) {
         self.networking.GET("/items") { JSON, error in
             if let JSON = JSON as? NSDictionary {
-                let items = JSON.normalize() as [AnyObject]
+                let items = JSON.normalize() as! [[String : AnyObject]]
                 Sync.changes(items, inEntityNamed: "Venue", dataStack: self.data, completion: { error in
                     completion(error: error)
                 })
