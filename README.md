@@ -1,4 +1,4 @@
-# Locator
+# Rescue Juice for iOS
 
 Display locations on a list or a map
 
@@ -26,7 +26,7 @@ pod install
 ```
 mogenerator \
 --swift \
---model Library/Models/Project.xcdatamodeld/Project.xcdatamodel \
---output-dir Library/Models \
+--model iOS/Models/App.xcdatamodeld/App.xcdatamodel \
+--output-dir iOS/Models \
 --v2
 ```

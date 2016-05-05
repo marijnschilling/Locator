@@ -2,49 +2,40 @@ PODS:
   - DATAFilter (0.9.1):
     - DATAObjectIDs (~> 0.5.1)
   - DATAObjectIDs (0.5.1)
-  - DATASource (5.6.3)
-  - DATAStack (4.2.4)
+  - DATASource (5.8.0)
+  - DATAStack (4.3.0)
   - Hex (3.0.0)
-  - Networking (0.23.0)
+  - Networking (0.24.0)
   - NSDictionary-ANDYSafeValue (0.3.1)
   - NSEntityDescription-SYNCPrimaryKey (0.1.2):
     - NSString-HYPNetworking (~> 0.4.0)
   - NSManagedObject-HYPPropertyMapper (3.6.0):
     - NSString-HYPNetworking (~> 0.4.0)
   - NSString-HYPNetworking (0.4.0)
-  - Sync (1.6.4):
+  - Sync (1.6.5):
     - DATAFilter (~> 0.9.1)
-    - DATAStack (~> 4.2.4)
+    - DATAStack (~> 4.3.0)
     - NSDictionary-ANDYSafeValue (~> 0.3.1)
     - NSEntityDescription-SYNCPrimaryKey (~> 0.1.2)
     - NSManagedObject-HYPPropertyMapper (~> 3.6.0)
 
 DEPENDENCIES:
-  - DATASource (from `git@github.com:3lvis/DATASource.git`)
+  - DATASource
   - Hex
   - Networking
   - Sync
 
-EXTERNAL SOURCES:
-  DATASource:
-    :git: git@github.com:3lvis/DATASource.git
-
-CHECKOUT OPTIONS:
-  DATASource:
-    :commit: 733a9a76eb5f8f360961d8d82deabcf66f207dae
-    :git: git@github.com:3lvis/DATASource.git
-
 SPEC CHECKSUMS:
   DATAFilter: 4a1bdc065847e19d9fa1c9dd92ed2d85847967a1
   DATAObjectIDs: 33db74dd1c858c2d22a45a4013c95f1082182e4e
-  DATASource: f36208fbb14f9eb60bbff230399875904e7f9c4d
-  DATAStack: 1574febd31668d7abfd898ce0b2913f8785027af
+  DATASource: d5ecdfa4be7d73d41f58746d3346e5238766c86d
+  DATAStack: 9aeb2ed96ee3fa0e1234cdd174d95b4b9779b68e
   Hex: ee430da9c4412d9196366ae5327f279021dc03eb
-  Networking: 706a536341f80d72dc85d246bf9658e3fdb165cc
+  Networking: 91c20405b17c17e578f0ca3e16a5e8c6533de83b
   NSDictionary-ANDYSafeValue: 2d7adf339b6e302d71fec5f1d71ae00aacda993e
   NSEntityDescription-SYNCPrimaryKey: 9a2b2f7b838913eb445f20cc2f2edca7281fcfa5
   NSManagedObject-HYPPropertyMapper: dbcaa74a43b522d45dacf1ad1c56b41ef008a0c0
   NSString-HYPNetworking: 24c3828eebde8a37cc16101a475934a56ac820c0
-  Sync: d6408c2da4c1f510a8538ef1d00ee62eb6c9c4eb
+  Sync: b2f1c213d5019f4dd019a9bba6be418606602a60
 
 COCOAPODS: 0.39.0

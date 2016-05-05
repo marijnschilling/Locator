@@ -1,17 +1,17 @@
 import UIKit
 
-public class BaseCollectionViewController: UICollectionViewController {
+class BaseCollectionViewController: UICollectionViewController {
     internal var fetcher: Fetcher
 
     // MARK: - Initializers
 
-    public init(fetcher: Fetcher, collectionViewLayout: UICollectionViewLayout) {
+    init(fetcher: Fetcher, collectionViewLayout: UICollectionViewLayout) {
         self.fetcher = fetcher
 
         super.init(collectionViewLayout: collectionViewLayout)
     }
 
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

@@ -2,33 +2,26 @@ import Foundation
 import DATAStack
 import Networking
 import Sync
+import CoreData
 
-public class Fetcher {
-    private var data: DATAStack
-    private var networking: Networking
-
-    // MARK: - Initializers
+class Fetcher {
+    var data: DATAStack
+    var networking: Networking
 
     init(baseURL: String, modelName: String) {
         self.data = DATAStack(modelName: modelName)
         self.networking = Networking(baseURL: baseURL)
+        self.networking.fakeGET("/venues", fileName: "venues.json")
     }
 
-    // MARK: - Public methods
-
-    public func persistWithCompletion(completion: () -> ()) {
-        data.persistWithCompletion(completion)
+    func persistWithCompletion(completion: (error: NSError?) -> Void) {
+        data.persist(completion)
     }
 
-    public func stubPosts() {
-        self.networking.fakeGET("/items", fileName: "original.json")
-    }
-
-    public func posts(completion: (error: NSError?) -> ()) {
-        self.networking.GET("/items") { JSON, error in
-            if let JSON = JSON as? NSDictionary {
-                let items = JSON.normalize() as! [[String : AnyObject]]
-                Sync.changes(items, inEntityNamed: "Venue", dataStack: self.data, completion: { error in
+    func posts(completion: (error: NSError?) -> ()) {
+        self.networking.GET("/venues") { JSON, error in
+            if let JSON = JSON as? [String : AnyObject], venues = JSON["venues"] as? [[String : AnyObject]] {
+                Sync.changes(venues, inEntityNamed: "Venue", dataStack: self.data, completion: { error in
                     completion(error: error)
                 })
             } else {

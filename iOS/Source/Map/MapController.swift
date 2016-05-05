@@ -29,8 +29,6 @@ class MapController: BaseViewController {
 
         self.title = "Map"
 
-        self.fetcher.stubPosts()
-
         self.fetcher.posts { error in
             let mapView = self.view as! MKMapView
             for venue in self.venues {
@@ -39,13 +37,13 @@ class MapController: BaseViewController {
             }
         }
 
-        let locationButton = UIBarButtonItem(image: UIImage(named: "location-normal")!, style: .Done, target: self, action: "locationButtonAction")
+        let locationButton = UIBarButtonItem(title: "Nearby", style: .Done, target: self, action: #selector(MapController.locationButtonAction))
         self.navigationItem.rightBarButtonItem = locationButton
     }
 
     func showVenueFromAnnotation(annotation: VenueAnnotation) {
-        let controller = VenueController(venue: annotation.venue)
-        self.navigationController?.pushViewController(controller, animated: true)
+        let venueController = VenueController(fetcher: self.fetcher, venue: annotation.venue)
+        self.presentViewController(venueController, animated: true, completion: nil)
     }
 
     func locationButtonAction() {
@@ -56,28 +54,17 @@ class MapController: BaseViewController {
         }
 
         locationManager.startUpdatingLocation()
-
-        let locationButton = UIBarButtonItem(image: UIImage(named: "location-selected")!, style: .Done, target: self, action: "locationButtonAction")
-        self.navigationItem.rightBarButtonItem = locationButton
     }
 }
 
 extension MapController: MKMapViewDelegate {
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation.isKindOfClass(MKPointAnnotation.self), let venueAnnotation = annotation as? VenueAnnotation else { return nil }
-
-        if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(VenueAnnotationView.Identifier) as? VenueAnnotationView {
-            annotationView.annotation = venueAnnotation
-            return annotationView
-        } else {
-            let annotationView = VenueAnnotationView(annotation: venueAnnotation)
-            return annotationView
-        }
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let venueAnnotation = view.annotation as? VenueAnnotation else { return }
+        showVenueFromAnnotation(venueAnnotation)
     }
 
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let annotationView = view as? VenueAnnotationView, venueAnnotation = annotationView.annotation as? VenueAnnotation else { return }
-        showVenueFromAnnotation(venueAnnotation)
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+
     }
 }
 

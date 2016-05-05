@@ -8,7 +8,7 @@ class VenueAnnotation: MKPointAnnotation {
 
         super.init()
 
-        self.title = venue.title
-        self.coordinate = CLLocationCoordinate2D(latitude: Double(venue.latitude!)!, longitude: Double(venue.longitude!)!)
+        self.title = venue.name
+        self.coordinate = CLLocationCoordinate2D(latitude: venue.latitude?.doubleValue ?? 0, longitude: venue.longitude?.doubleValue ?? 0)
     }
 }

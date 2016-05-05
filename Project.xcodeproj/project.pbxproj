@@ -14,6 +14,8 @@
 		141A6FDB1BDE2DAB00CB6E82 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD61BDE2DAB00CB6E82 /* Fetcher.swift */; };
 		141A6FDC1BDE2DAB00CB6E82 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */; };
 		141A6FDD1BDE2DAB00CB6E82 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */; };
+		141C7EA21CDBB59C004796A2 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = 141C7EA11CDBB59C004796A2 /* venues.json */; };
+		141C7EA31CDBB59C004796A2 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = 141C7EA11CDBB59C004796A2 /* venues.json */; };
 		142D52A51C1E280700CC4086 /* MKMapView+Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142D52A41C1E280700CC4086 /* MKMapView+Zoom.swift */; };
 		142E8B891C17B93C008CA262 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B881C17B93C008CA262 /* TabBarController.swift */; };
 		142E8B931C17C467008CA262 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B8B1C17C467008CA262 /* VenueController.swift */; };
@@ -21,26 +23,24 @@
 		142E8B951C17C467008CA262 /* VenuesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B8E1C17C467008CA262 /* VenuesController.swift */; };
 		142E8B961C17C467008CA262 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B901C17C467008CA262 /* MapController.swift */; };
 		142E8B971C17C467008CA262 /* VenueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B911C17C467008CA262 /* VenueAnnotation.swift */; };
-		142E8B981C17C467008CA262 /* VenueAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B921C17C467008CA262 /* VenueAnnotationView.swift */; };
 		1445AED51C0BC0F900D746A9 /* _Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED31C0BC0F900D746A9 /* _Venue.swift */; };
 		1445AED61C0BC0F900D746A9 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED41C0BC0F900D746A9 /* Venue.swift */; };
 		145901CA1C1955AF009B21C2 /* VenuesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145901C91C1955AF009B21C2 /* VenuesHeader.swift */; };
+		145A34E41C558701001DD09A /* OpeningTimesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A34E31C558701001DD09A /* OpeningTimesController.swift */; };
 		146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 146E279F1BCD51F200959BBA /* LaunchScreen.xib */; };
 		146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146E27A11BCD51F200959BBA /* Images.xcassets */; };
 		146E27AC1BCD51F200959BBA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E27A41BCD51F200959BBA /* AppController.swift */; };
-		1483128E1B92C11500266943 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1483128D1B92C11500266943 /* Tests.swift */; };
-		14B3CE841C1DE57F0032AA9A /* original.json in Resources */ = {isa = PBXBuildFile; fileRef = 14B3CE831C1DE57F0032AA9A /* original.json */; };
-		14B3CE861C1DE5B20032AA9A /* JSONNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */; };
-		14B3CE871C1DE5B20032AA9A /* JSONNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */; };
-		14B3CE881C1DE5C10032AA9A /* original.json in Resources */ = {isa = PBXBuildFile; fileRef = 14B3CE831C1DE57F0032AA9A /* original.json */; };
-		14CDD6CF1C1F5DA400E05AC3 /* styling.html in Resources */ = {isa = PBXBuildFile; fileRef = 14CDD6CE1C1F5DA400E05AC3 /* styling.html */; };
-		14CE3E2D1C0BB35D0095C3F3 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CE3E2B1C0BB35D0095C3F3 /* items.json */; };
-		14CE3E2E1C0BB35D0095C3F3 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14CE3E2B1C0BB35D0095C3F3 /* items.json */; };
+		1496981B1C4C27E10044CD8F /* bar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1496981A1C4C27E10044CD8F /* bar.jpg */; };
+		14CB66A21C1E2EF000E2D2A9 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB669B1C1E2EF000E2D2A9 /* ProximaNova-Black.otf */; };
+		14CB66A31C1E2EF000E2D2A9 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB669C1C1E2EF000E2D2A9 /* ProximaNova-Bold.otf */; };
+		14CB66A41C1E2EF000E2D2A9 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB669D1C1E2EF000E2D2A9 /* ProximaNova-Light.otf */; };
+		14CB66A51C1E2EF000E2D2A9 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB669E1C1E2EF000E2D2A9 /* ProximaNova-Reg.otf */; };
+		14CB66A61C1E2EF000E2D2A9 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB669F1C1E2EF000E2D2A9 /* ProximaNova-Sbold.otf */; };
+		14CB66A71C1E2EF000E2D2A9 /* ProximaNova-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB66A01C1E2EF000E2D2A9 /* ProximaNova-Thin.otf */; };
+		14CB66A81C1E2EF000E2D2A9 /* ProximaNova-Xbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14CB66A11C1E2EF000E2D2A9 /* ProximaNova-Xbold.otf */; };
 		14D21D8D1C0BC0600046D709 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */; };
 		14D21D8E1C0BC0600046D709 /* Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */; };
-		14EE62B71C194BAB0002E197 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */; };
-		14EE62B81C194BAB0002E197 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14EE62B51C194BAB0002E197 /* Montserrat-Regular.ttf */; };
-		14EE62B91C194BAB0002E197 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 14EE62B61C194BAB0002E197 /* OFL.txt */; };
+		14DED3CE1C25EF3400C326BE /* missing-items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14DED3CD1C25EF3400C326BE /* missing-items.json */; };
 		1AEE83785D4D58C5A9367923 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A34B165B3DDF602D1210F42 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +52,7 @@
 		141A6FD61BDE2DAB00CB6E82 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
+		141C7EA11CDBB59C004796A2 /* venues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = venues.json; sourceTree = "<group>"; };
 		142D52A41C1E280700CC4086 /* MKMapView+Zoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Zoom.swift"; sourceTree = "<group>"; };
 		142E8B881C17B93C008CA262 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		142E8B8B1C17C467008CA262 /* VenueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
@@ -59,10 +60,10 @@
 		142E8B8E1C17C467008CA262 /* VenuesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesController.swift; sourceTree = "<group>"; };
 		142E8B901C17C467008CA262 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		142E8B911C17C467008CA262 /* VenueAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueAnnotation.swift; sourceTree = "<group>"; };
-		142E8B921C17C467008CA262 /* VenueAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueAnnotationView.swift; sourceTree = "<group>"; };
 		1445AED31C0BC0F900D746A9 /* _Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Venue.swift; sourceTree = "<group>"; };
 		1445AED41C0BC0F900D746A9 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		145901C91C1955AF009B21C2 /* VenuesHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesHeader.swift; sourceTree = "<group>"; };
+		145A34E31C558701001DD09A /* OpeningTimesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningTimesController.swift; sourceTree = "<group>"; };
 		146E27891BCD51C800959BBA /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146E27A01BCD51F200959BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		146E27A11BCD51F200959BBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -70,15 +71,16 @@
 		146E27A41BCD51F200959BBA /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		148312891B92C11500266943 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1483128C1B92C11500266943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1483128D1B92C11500266943 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		14B3CE831C1DE57F0032AA9A /* original.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = original.json; sourceTree = "<group>"; };
-		14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNormalizer.swift; sourceTree = "<group>"; };
-		14CDD6CE1C1F5DA400E05AC3 /* styling.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = styling.html; sourceTree = "<group>"; };
-		14CE3E2B1C0BB35D0095C3F3 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
+		1496981A1C4C27E10044CD8F /* bar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bar.jpg; sourceTree = "<group>"; };
+		14CB669B1C1E2EF000E2D2A9 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		14CB669C1C1E2EF000E2D2A9 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		14CB669D1C1E2EF000E2D2A9 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		14CB669E1C1E2EF000E2D2A9 /* ProximaNova-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Reg.otf"; sourceTree = "<group>"; };
+		14CB669F1C1E2EF000E2D2A9 /* ProximaNova-Sbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Sbold.otf"; sourceTree = "<group>"; };
+		14CB66A01C1E2EF000E2D2A9 /* ProximaNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Thin.otf"; sourceTree = "<group>"; };
+		14CB66A11C1E2EF000E2D2A9 /* ProximaNova-Xbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Xbold.otf"; sourceTree = "<group>"; };
 		14D21D8C1C0BC0600046D709 /* Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project.xcdatamodel; sourceTree = "<group>"; };
-		14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		14EE62B51C194BAB0002E197 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		14EE62B61C194BAB0002E197 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		14DED3CD1C25EF3400C326BE /* missing-items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "missing-items.json"; sourceTree = "<group>"; };
 		6A34B165B3DDF602D1210F42 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7007EA8FF8BABCFC3034674 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +116,6 @@
 				141A6FD71BDE2DAB00CB6E82 /* UIColor+Custom.swift */,
 				141A6FD81BDE2DAB00CB6E82 /* UIFont+Custom.swift */,
 				142E8B881C17B93C008CA262 /* TabBarController.swift */,
-				14B3CE851C1DE5B20032AA9A /* JSONNormalizer.swift */,
 				142D52A41C1E280700CC4086 /* MKMapView+Zoom.swift */,
 			);
 			path = Library;
@@ -124,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				142E8B8B1C17C467008CA262 /* VenueController.swift */,
+				145A34E31C558701001DD09A /* OpeningTimesController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -143,7 +145,6 @@
 			children = (
 				142E8B901C17C467008CA262 /* MapController.swift */,
 				142E8B911C17C467008CA262 /* VenueAnnotation.swift */,
-				142E8B921C17C467008CA262 /* VenueAnnotationView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -160,11 +161,10 @@
 		146E279E1BCD51F200959BBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				14EE62B31C194BAB0002E197 /* Fonts */,
-				14CE3E2B1C0BB35D0095C3F3 /* items.json */,
-				14B3CE831C1DE57F0032AA9A /* original.json */,
-				14CDD6CE1C1F5DA400E05AC3 /* styling.html */,
+				141C7EA11CDBB59C004796A2 /* venues.json */,
+				14CB669A1C1E2EF000E2D2A9 /* Fonts */,
 				146E279F1BCD51F200959BBA /* LaunchScreen.xib */,
+				1496981A1C4C27E10044CD8F /* bar.jpg */,
 				146E27A11BCD51F200959BBA /* Images.xcassets */,
 				146E27A21BCD51F200959BBA /* Info.plist */,
 			);
@@ -206,10 +206,24 @@
 		1483128A1B92C11500266943 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1483128D1B92C11500266943 /* Tests.swift */,
+				14DED3CD1C25EF3400C326BE /* missing-items.json */,
 				1483128C1B92C11500266943 /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		14CB669A1C1E2EF000E2D2A9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				14CB669B1C1E2EF000E2D2A9 /* ProximaNova-Black.otf */,
+				14CB669C1C1E2EF000E2D2A9 /* ProximaNova-Bold.otf */,
+				14CB669D1C1E2EF000E2D2A9 /* ProximaNova-Light.otf */,
+				14CB669E1C1E2EF000E2D2A9 /* ProximaNova-Reg.otf */,
+				14CB669F1C1E2EF000E2D2A9 /* ProximaNova-Sbold.otf */,
+				14CB66A01C1E2EF000E2D2A9 /* ProximaNova-Thin.otf */,
+				14CB66A11C1E2EF000E2D2A9 /* ProximaNova-Xbold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		14D21D8A1C0BC0600046D709 /* Models */ = {
@@ -220,16 +234,6 @@
 				14D21D8B1C0BC0600046D709 /* Project.xcdatamodeld */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		14EE62B31C194BAB0002E197 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				14EE62B41C194BAB0002E197 /* Montserrat-Bold.ttf */,
-				14EE62B51C194BAB0002E197 /* Montserrat-Regular.ttf */,
-				14EE62B61C194BAB0002E197 /* OFL.txt */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		65453B2E3E8B042C8B17E59D /* Frameworks */ = {
@@ -335,13 +339,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EE62B91C194BAB0002E197 /* OFL.txt in Resources */,
-				14CDD6CF1C1F5DA400E05AC3 /* styling.html in Resources */,
-				14EE62B71C194BAB0002E197 /* Montserrat-Bold.ttf in Resources */,
-				14CE3E2D1C0BB35D0095C3F3 /* items.json in Resources */,
-				14B3CE841C1DE57F0032AA9A /* original.json in Resources */,
+				14CB66A51C1E2EF000E2D2A9 /* ProximaNova-Reg.otf in Resources */,
+				14CB66A21C1E2EF000E2D2A9 /* ProximaNova-Black.otf in Resources */,
+				14CB66A71C1E2EF000E2D2A9 /* ProximaNova-Thin.otf in Resources */,
+				14CB66A41C1E2EF000E2D2A9 /* ProximaNova-Light.otf in Resources */,
+				14CB66A61C1E2EF000E2D2A9 /* ProximaNova-Sbold.otf in Resources */,
+				141C7EA21CDBB59C004796A2 /* venues.json in Resources */,
+				14CB66A31C1E2EF000E2D2A9 /* ProximaNova-Bold.otf in Resources */,
 				146E27AA1BCD51F200959BBA /* Images.xcassets in Resources */,
-				14EE62B81C194BAB0002E197 /* Montserrat-Regular.ttf in Resources */,
+				14CB66A81C1E2EF000E2D2A9 /* ProximaNova-Xbold.otf in Resources */,
+				1496981B1C4C27E10044CD8F /* bar.jpg in Resources */,
 				146E27A91BCD51F200959BBA /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,8 +357,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B3CE881C1DE5C10032AA9A /* original.json in Resources */,
-				14CE3E2E1C0BB35D0095C3F3 /* items.json in Resources */,
+				14DED3CE1C25EF3400C326BE /* missing-items.json in Resources */,
+				141C7EA31CDBB59C004796A2 /* venues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +465,8 @@
 				142D52A51C1E280700CC4086 /* MKMapView+Zoom.swift in Sources */,
 				1445AED51C0BC0F900D746A9 /* _Venue.swift in Sources */,
 				141A6FDB1BDE2DAB00CB6E82 /* Fetcher.swift in Sources */,
-				142E8B981C17C467008CA262 /* VenueAnnotationView.swift in Sources */,
 				146E27AC1BCD51F200959BBA /* AppController.swift in Sources */,
 				145901CA1C1955AF009B21C2 /* VenuesHeader.swift in Sources */,
-				14B3CE861C1DE5B20032AA9A /* JSONNormalizer.swift in Sources */,
 				142E8B931C17C467008CA262 /* VenueController.swift in Sources */,
 				142E8B941C17C467008CA262 /* VenueCell.swift in Sources */,
 				142E8B891C17B93C008CA262 /* TabBarController.swift in Sources */,
@@ -470,6 +475,7 @@
 				141A6FDD1BDE2DAB00CB6E82 /* UIFont+Custom.swift in Sources */,
 				141A6FD91BDE2DAB00CB6E82 /* BaseTableViewController.swift in Sources */,
 				141A6FDA1BDE2DAB00CB6E82 /* BaseViewController.swift in Sources */,
+				145A34E41C558701001DD09A /* OpeningTimesController.swift in Sources */,
 				142E8B951C17C467008CA262 /* VenuesController.swift in Sources */,
 				1445AED61C0BC0F900D746A9 /* Venue.swift in Sources */,
 				142E8B961C17C467008CA262 /* MapController.swift in Sources */,
@@ -482,9 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1483128E1B92C11500266943 /* Tests.swift in Sources */,
 				14D21D8E1C0BC0600046D709 /* Project.xcdatamodeld in Sources */,
-				14B3CE871C1DE5B20032AA9A /* JSONNormalizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,9 +515,9 @@
 				INFOPLIST_FILE = iOS/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "COM.COMPANY-NAME.APP-NAME.iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.locator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -525,9 +529,9 @@
 				INFOPLIST_FILE = iOS/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "COM.COMPANY-NAME.APP-NAME.iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.locator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "count": 47,
+  "count_total": 47,
+  "pages": 0,
+  "posts": [
+    {
+      "id": 2559,
+      "url": null
+    }
+  ],
+  "query": {
+    "ignore_sticky_posts": true,
+    "q": "/news/category/app/",
+    "count": "-1",
+    "status": "published",
+    "cat": "app",
+    "v": "c2f3f489a005"
+  }
+}

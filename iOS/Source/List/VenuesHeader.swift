@@ -10,6 +10,6 @@ class VenuesHeader: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        self.textLabel?.font = UIFont.regular(15)
+        self.textLabel?.font = UIFont.semiBold(15)
     }
 }

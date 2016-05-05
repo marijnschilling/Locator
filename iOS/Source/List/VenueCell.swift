@@ -15,7 +15,7 @@ class VenueCell: UITableViewCell {
 
     var venue: Venue? {
         didSet {
-            self.textLabel?.text = venue?.title ?? ""
+            self.textLabel?.text = venue?.name ?? ""
         }
     }
 }

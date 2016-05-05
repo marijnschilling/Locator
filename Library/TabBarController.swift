@@ -3,6 +3,7 @@ import UIKit
 class TabBarController: UITabBarController {
     init() {
         super.init(nibName: nil, bundle: nil)
+        self.tabBar.tintColor = UIColor.blackColor()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -11,7 +12,7 @@ class TabBarController: UITabBarController {
         if let items = self.tabBar.items {
             for button in items {
                 button.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -13)
-                button.setTitleTextAttributes([NSFontAttributeName : UIFont.regular(16)], forState: .Normal)
+                button.setTitleTextAttributes([NSFontAttributeName : UIFont.semiBold(16)], forState: .Normal)
             }
         }
     }
