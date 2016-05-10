@@ -1,8 +1,11 @@
 use_frameworks!
 
-link_with 'iOS', 'Tests'
+target 'iOS' do
+  pod 'Sync'
+  pod 'Networking'
+  pod 'Hex'
+  pod 'DATASource'
+end
 
-pod 'Sync'
-pod 'Networking'
-pod 'Hex'
-pod 'DATASource'
+target 'Tests' do
+end
