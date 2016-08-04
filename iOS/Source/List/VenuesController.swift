@@ -44,6 +44,7 @@ extension VenuesController: UITableViewDelegate {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterViewWithIdentifier(VenuesHeader.Identifier) as? VenuesHeader
         header?.textLabel?.text = self.dataSource.titleForHeaderInSection(section)
+
         return header
     }
 
