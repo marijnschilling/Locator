@@ -1,9 +1,7 @@
 import UIKit
 
 class BaseCollectionViewController: UICollectionViewController {
-    internal var fetcher: Fetcher
-
-    // MARK: - Initializers
+    unowned var fetcher: Fetcher
 
     init(fetcher: Fetcher, collectionViewLayout: UICollectionViewLayout) {
         self.fetcher = fetcher

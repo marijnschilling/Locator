@@ -1,9 +1,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    internal var fetcher: Fetcher
-
-    // MARK: - Initializers
+    var fetcher: Fetcher
 
     init(fetcher: Fetcher) {
         self.fetcher = fetcher

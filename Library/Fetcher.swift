@@ -14,19 +14,19 @@ class Fetcher {
         self.networking.fakeGET("/venues", fileName: "venues.json")
     }
 
-    func posts(completion: (error: NSError?) -> ()) {
+    func posts(completion: (error: NSError?) -> Void) {
         self.networking.GET("/venues") { JSON, error in
             if let JSON = JSON as? [String : AnyObject], venues = JSON["venues"] as? [[String : AnyObject]] {
-                Sync.changes(venues, inEntityNamed: "Venue", dataStack: self.data, completion: { error in
+                Sync.changes(venues, inEntityNamed: "Venue", dataStack: self.data) { error in
                     completion(error: error)
-                })
+                }
             } else {
                 completion(error: error)
             }
         }
     }
 
-    var context: NSManagedObjectContext {
+    var viewContext: NSManagedObjectContext {
         return self.data.mainContext
     }
 }
