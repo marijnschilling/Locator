@@ -14,10 +14,6 @@ class Fetcher {
         self.networking.fakeGET("/venues", fileName: "venues.json")
     }
 
-    func persistWithCompletion(completion: (error: NSError?) -> Void) {
-        data.persist(completion)
-    }
-
     func posts(completion: (error: NSError?) -> ()) {
         self.networking.GET("/venues") { JSON, error in
             if let JSON = JSON as? [String : AnyObject], venues = JSON["venues"] as? [[String : AnyObject]] {
