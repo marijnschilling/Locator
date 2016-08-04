@@ -25,14 +25,7 @@ extension AppController: UIApplicationDelegate {
         let venuesTabBarItem = UITabBarItem(title: "Venues", image: nil, selectedImage: nil)
         venuesNavigationController.tabBarItem = venuesTabBarItem
 
-        let mapNavigationController = UINavigationController(rootViewController: MapController(fetcher: self.fetcher))
-        mapNavigationController.navigationBar.tintColor = UIColor.blackColor()
-        let mapTabBarItem = UITabBarItem(title: "Map", image: nil, selectedImage: nil)
-        mapNavigationController.tabBarItem = mapTabBarItem
-
-        let tabController = TabBarController()
-        tabController.viewControllers = [mapNavigationController, venuesNavigationController]
-        window.rootViewController = tabController
+        window.rootViewController = venuesNavigationController
         window.makeKeyAndVisible()
 
         return true

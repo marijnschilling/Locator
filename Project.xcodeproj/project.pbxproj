@@ -20,8 +20,6 @@
 		142E8B931C17C467008CA262 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B8B1C17C467008CA262 /* VenueController.swift */; };
 		142E8B941C17C467008CA262 /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B8D1C17C467008CA262 /* VenueCell.swift */; };
 		142E8B951C17C467008CA262 /* VenuesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B8E1C17C467008CA262 /* VenuesController.swift */; };
-		142E8B961C17C467008CA262 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B901C17C467008CA262 /* MapController.swift */; };
-		142E8B971C17C467008CA262 /* VenueAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142E8B911C17C467008CA262 /* VenueAnnotation.swift */; };
 		1445AED51C0BC0F900D746A9 /* _Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED31C0BC0F900D746A9 /* _Venue.swift */; };
 		1445AED61C0BC0F900D746A9 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1445AED41C0BC0F900D746A9 /* Venue.swift */; };
 		145901CA1C1955AF009B21C2 /* VenuesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145901C91C1955AF009B21C2 /* VenuesHeader.swift */; };
@@ -57,8 +55,6 @@
 		142E8B8B1C17C467008CA262 /* VenueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
 		142E8B8D1C17C467008CA262 /* VenueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		142E8B8E1C17C467008CA262 /* VenuesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesController.swift; sourceTree = "<group>"; };
-		142E8B901C17C467008CA262 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
-		142E8B911C17C467008CA262 /* VenueAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueAnnotation.swift; sourceTree = "<group>"; };
 		1445AED31C0BC0F900D746A9 /* _Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Venue.swift; sourceTree = "<group>"; };
 		1445AED41C0BC0F900D746A9 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		145901C91C1955AF009B21C2 /* VenuesHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesHeader.swift; sourceTree = "<group>"; };
@@ -144,15 +140,6 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		142E8B8F1C17C467008CA262 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				142E8B901C17C467008CA262 /* MapController.swift */,
-				142E8B911C17C467008CA262 /* VenueAnnotation.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
 		146E278A1BCD51C800959BBA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				146E27A41BCD51F200959BBA /* AppController.swift */,
-				142E8B8F1C17C467008CA262 /* Map */,
 				142E8B8C1C17C467008CA262 /* List */,
 				142E8B8A1C17C467008CA262 /* Detail */,
 			);
@@ -486,8 +472,6 @@
 				145A34E41C558701001DD09A /* OpeningTimesController.swift in Sources */,
 				142E8B951C17C467008CA262 /* VenuesController.swift in Sources */,
 				1445AED61C0BC0F900D746A9 /* Venue.swift in Sources */,
-				142E8B961C17C467008CA262 /* MapController.swift in Sources */,
-				142E8B971C17C467008CA262 /* VenueAnnotation.swift in Sources */,
 				1404F39A1BDE45CD0008377F /* BaseCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
