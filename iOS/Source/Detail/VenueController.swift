@@ -41,7 +41,7 @@ class VenueController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .Center
         label.textColor = UIColor.whiteColor()
-        label.font = UIFont(name: "BodoniSvtyTwoITCTT-BookIta", size: 16)
+        label.font = UIFont.detailBookItalic(16)
 
         return label
     }()
@@ -49,7 +49,7 @@ class VenueController: UIViewController {
     lazy var descriptionTextView: UITextView = {
         let bounds = UIScreen.mainScreen().bounds
         let view = UITextView(frame: CGRect(x: 40, y: 200, width: bounds.width - 80, height: 210))
-        view.font = UIFont(name: "BodoniSvtyTwoITCTT-Book", size: 18)
+        view.font = UIFont.detailBook(18)
         view.backgroundColor = UIColor.clearColor()
         view.textColor = UIColor.whiteColor()
         view.editable = false

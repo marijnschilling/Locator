@@ -35,4 +35,12 @@ extension UIFont {
     class func semiBold(size: Double) -> UIFont {
         return UIFont(name: "ProximaNova-Semibold", size: CGFloat(size))!
     }
+
+    class func detailBook(size: Double) -> UIFont {
+        return UIFont(name: "BodoniSvtyTwoITCTT-Book", size: CGFloat(size))!
+    }
+
+    class func detailBookItalic(size: Double) -> UIFont {
+        return UIFont(name: "BodoniSvtyTwoITCTT-BookIta", size: CGFloat(size))!
+    }
 }
