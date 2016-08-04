@@ -9,7 +9,7 @@ class VenuesController: BaseTableViewController {
             NSSortDescriptor(key: VenueAttributes.city.rawValue, ascending: true),
             NSSortDescriptor(key: VenueAttributes.name.rawValue, ascending: true)
         ]
-        let dataSource = DATASource(tableView: self.controllerView, cellIdentifier: VenueCell.Identifier, fetchRequest: request, mainContext: self.fetcher.viewContext, sectionName: VenueAttributes.city.rawValue) { cell, item, indexPath in
+        let dataSource = DATASource(tableView: self.tableView, cellIdentifier: VenueCell.Identifier, fetchRequest: request, mainContext: self.fetcher.viewContext, sectionName: VenueAttributes.city.rawValue) { cell, item, indexPath in
             if let cell = cell as? VenueCell, venue = item as? Venue {
                 cell.venue = venue
             }
@@ -24,11 +24,11 @@ class VenuesController: BaseTableViewController {
         super.viewDidLoad()
 
         self.title = "Venues"
-        self.controllerView.registerClass(VenueCell.self, forCellReuseIdentifier: VenueCell.Identifier)
-        self.controllerView.registerClass(VenuesHeader.self, forHeaderFooterViewReuseIdentifier: VenuesHeader.Identifier)
-        self.controllerView.dataSource = self.dataSource
-        self.controllerView.delegate = self
-        self.controllerView.rowHeight = 60
+        self.tableView.registerClass(VenueCell.self, forCellReuseIdentifier: VenueCell.Identifier)
+        self.tableView.registerClass(VenuesHeader.self, forHeaderFooterViewReuseIdentifier: VenuesHeader.Identifier)
+        self.tableView.dataSource = self.dataSource
+        self.tableView.delegate = self
+        self.tableView.rowHeight = 60
 
         self.fetcher.posts { error in
             

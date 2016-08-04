@@ -3,7 +3,7 @@ import UIKit
 class BaseTableViewController: UIViewController {
     var fetcher: Fetcher
 
-    var controllerView: UITableView {
+    var tableView: UITableView {
         return self.view as! UITableView
     }
 
@@ -27,6 +27,6 @@ class BaseTableViewController: UIViewController {
         super.viewWillLayoutSubviews()
 
         let bounds = UIScreen.mainScreen().bounds
-        self.controllerView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+        self.tableView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
     }
 }
