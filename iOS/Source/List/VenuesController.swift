@@ -28,6 +28,10 @@ class VenuesController: BaseTableViewController {
         self.tableView.registerClass(VenuesHeader.self, forHeaderFooterViewReuseIdentifier: VenuesHeader.Identifier)
         self.tableView.dataSource = self.dataSource
         self.tableView.rowHeight = 60
+
+        self.fetcher.posts { error in
+            
+        }
     }
 }
 
