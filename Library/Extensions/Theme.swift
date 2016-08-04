@@ -1,4 +1,11 @@
 import UIKit
+import Hex
+
+extension UIColor {
+    class func customColor() -> UIColor {
+        return UIColor(hex: "FF4B47")
+    }
+}
 
 extension UIFont {
     class func black(size: Double) -> UIFont {
